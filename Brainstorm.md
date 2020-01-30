@@ -1,4 +1,5 @@
-## Idea 1:
+# Brainstorm
 
-3-Grillzonenlauf mit GPS-Tracking
+## 'Park'our Runner
 
+Collect rewards by visiting parks in Vienna. Real Time Score + Weekly/Monthly Leaderbord

@@ -1,5 +1,4 @@
 # Brainstorm
 
 ## 'Park'our Runner
-
-Collect rewards by visiting parks in Vienna. Real Time Score + Weekly/Monthly Leaderbord
+A mobile app using React Native. You get points by visiting parks. The scores a stored on the Server.

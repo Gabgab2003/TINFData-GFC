@@ -5,17 +5,37 @@
 
 import React from 'react';
 
-import {Button, PermissionsAndroid, ScrollView, Text, View} from 'react-native';
+import {
+    Button,
+    PermissionsAndroid,
+    ScrollView,
+    Text,
+    View,
+    ToastAndroid,
+} from 'react-native';
 
 import Geolocation from 'react-native-geolocation-service';
 
 import styles from '../styles';
 
+const server = '127.0.0.1';
+
 class Nearby extends React.Component {
-    location() {
+    reloadList(): void {
         Geolocation.getCurrentPosition(
             position => {
-                console.log(position);
+                fetch(`${server}/getparks`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    method: 'POST',
+                    body: JSON.stringify(position),
+                })
+                    .then(r => JSON.parse(r))
+                    .then(r => this.setState({parks: r.parks}))
+                    .catch(e =>
+                        ToastAndroid.show(e.message, ToastAndroid.SHORT),
+                    );
             },
             error => {
                 console.log(error.code, error.message);
@@ -23,8 +43,12 @@ class Nearby extends React.Component {
             {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
         );
     }
-    constructor(props, context): void {
+
+    constructor(props, context) {
         super(props, context);
+        this.state = {
+            parks: [],
+        };
     }
 
     render() {
@@ -40,9 +64,7 @@ class Nearby extends React.Component {
                 <View style={styles.body}>
                     <View style={styles.sectionContainer}>
                         <Text style={styles.sectionTitle}>Custom stuff</Text>
-                        <Button onPress={this.location} title={'Yes'}>
-                            t
-                        </Button>
+                        <Button onPress={this.reloadList} title="Yes" />
                     </View>
                     <View style={styles.sectionContainer}>
                         <Text style={styles.sectionTitle}>Learn More</Text>
@@ -54,6 +76,7 @@ class Nearby extends React.Component {
             </ScrollView>
         );
     }
+
     componentDidMount() {
         this.requestGPSPermission();
     }

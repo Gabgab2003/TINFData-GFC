@@ -11,7 +11,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Nearby from './views/GeoTest';
+import Nearby from './views/Nearby';
 import Home from './views/Home';
 
 const Stack = createStackNavigator();

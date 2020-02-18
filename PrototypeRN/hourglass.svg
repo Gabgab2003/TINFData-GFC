@@ -1,0 +1,17 @@
+<svg width="200" height="295" viewBox="0 0 200 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="295" fill="#E5E5E5"/>
+<line y1="5" x2="200" y2="6" stroke="black" stroke-width="10"/>
+<line y1="-5" x2="200" y2="-4" transform="matrix(1 0 0 -1 0 285)" stroke="black" stroke-width="10"/>
+<path d="M25 10C25.7619 108.621 65.3175 134.425 85 135" stroke="black" stroke-width="5"/>
+<line x1="82.5" y1="135" x2="82.5" y2="155" stroke="black" stroke-width="5"/>
+<path d="M25 285C25.7619 186.379 65.3175 160.575 85 160" stroke="black" stroke-width="5"/>
+<line y1="-2.5" x2="20" y2="-2.5" transform="matrix(0 -1 -1 0 80 160)" stroke="black" stroke-width="5"/>
+<path d="M175 10C174.238 108.621 134.683 134.425 115 135" stroke="black" stroke-width="5"/>
+<line y1="-2.5" x2="20" y2="-2.5" transform="matrix(0 1 1 0 120 135)" stroke="black" stroke-width="5"/>
+<path d="M175 285C174.238 186.379 134.683 160.575 115 160" stroke="black" stroke-width="5"/>
+<line x1="117.5" y1="160" x2="117.5" y2="140" stroke="black" stroke-width="5"/>
+<path d="M100 223L154.56 280H45.4404L100 223Z" fill="black"/>
+<path d="M100 135L146.765 97.5H53.2346L100 135Z" fill="black"/>
+<circle cx="100" cy="145" r="5" fill="black"/>
+<circle cx="100" cy="160" r="5" fill="black"/>
+</svg>

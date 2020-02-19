@@ -18,21 +18,31 @@ import Geolocation from 'react-native-geolocation-service';
 
 import styles from '../styles';
 
-const server = '127.0.0.1';
+const server = 'http://5.132.191.83/';
 
 class Nearby extends React.Component {
-    reloadList(): void {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            parks: [],
+        };
+    }
+
+    reloadList(that): void {
         Geolocation.getCurrentPosition(
             position => {
-                fetch(`${server}/getparks`, {
+                console.log(position);
+                fetch(`${server}:8000/getparks`, {
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     method: 'POST',
                     body: JSON.stringify(position),
                 })
-                    .then(r => JSON.parse(r))
-                    .then(r => this.setState({parks: r.parks}))
+                    .then(r => r.json())
+                    .then(r => {
+                        that.setState({parks: r});
+                    })
                     .catch(e =>
                         ToastAndroid.show(e.message, ToastAndroid.SHORT),
                     );
@@ -42,13 +52,6 @@ class Nearby extends React.Component {
             },
             {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
         );
-    }
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            parks: [],
-        };
     }
 
     render() {
@@ -63,13 +66,18 @@ class Nearby extends React.Component {
                 )}
                 <View style={styles.body}>
                     <View style={styles.sectionContainer}>
-                        <Text style={styles.sectionTitle}>Custom stuff</Text>
-                        <Button onPress={this.reloadList} title="Yes" />
+                        <Text style={styles.sectionTitle}>Reload</Text>
+                        <Button
+                            onPress={() => this.reloadList(this)}
+                            title="Reload"
+                        />
                     </View>
                     <View style={styles.sectionContainer}>
-                        <Text style={styles.sectionTitle}>Learn More</Text>
+                        <Text style={styles.sectionTitle}>Parks</Text>
                         <Text style={styles.sectionDescription}>
-                            Yes, the app here is made out of app.
+                            {this.state.parks.map(p => (
+                                <Text>{p.properties.ANL_NAME + '\n'}</Text>
+                            ))}
                         </Text>
                     </View>
                 </View>
@@ -93,9 +101,7 @@ class Nearby extends React.Component {
                     buttonPositive: 'OK',
                 },
             );
-            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-                console.log('You can use gps');
-            } else {
+            if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
                 console.log('Gps permission denied');
             }
         } catch (err) {

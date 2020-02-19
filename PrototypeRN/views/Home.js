@@ -27,7 +27,7 @@ const Home = ({navigation}) => (
             </View>
             <View style={styles.sectionContainer}>
                 <Button
-                    title="Parks nearby"
+                    title="View Parks nearby"
                     onPress={() => navigation.navigate('Nearby')}
                 />
             </View>

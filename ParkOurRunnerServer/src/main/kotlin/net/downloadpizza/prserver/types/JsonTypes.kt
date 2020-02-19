@@ -61,7 +61,7 @@ data class ParkProperties(
     val cadData: String?
 )
 
-interface Park {
+interface IPark {
     val type: String
     val id: String
     val geometry: ParkGeometry
@@ -69,14 +69,14 @@ interface Park {
     val properties: ParkProperties
 }
 
-data class SimplePark(
+data class Park(
     override val type: String,
     override val id: String,
     override val geometry: ParkGeometry,
     @Json(name = "geometry_name")
     override val geometryName: String,
     override val properties: ParkProperties
-): Park
+): IPark
 
 data class ParkWithDist(
     override val type: String,
@@ -86,7 +86,7 @@ data class ParkWithDist(
     override val geometryName: String,
     override val properties: ParkProperties,
     val distance: Double
-): Park
+): IPark
 
 data class ParkFile(
     val type: String,

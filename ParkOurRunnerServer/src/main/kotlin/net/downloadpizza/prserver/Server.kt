@@ -37,6 +37,7 @@ fun main() {
         }
     )
 
+    println("YEYAYEYA")
     val server = app.asServer(Jetty(8000)).start()
 
     Runtime.getRuntime().addShutdownHook(object : Thread() {

@@ -1,8 +1,6 @@
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-
 plugins {
     kotlin("jvm") version "1.3.61"
-    id("com.github.johnrengelman.shadow") version "5.2.0"
+    application
 }
 
 group = "org.example"
@@ -29,6 +27,11 @@ tasks {
     }
 }
 
-tasks.withType<ShadowJar> {
-    this.manifest.attributes["Main-Class"] = "net.downloadpizza.prserver.ServerKt"
+
+
+
+
+application {
+    mainClassName = "net.downloadpizza.prserver.ServerKt"
 }
+

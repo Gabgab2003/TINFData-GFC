@@ -1,0 +1,37 @@
+#Protocol from Christoph Kainz
+
+## Date
+
+27.02.2020
+
+## Topic worked on
+
+Made model together with Klenner, worked on first landing screen
+
+## How was the lesson:
+
+++
+
+## Achieved
+
+Model for Project Structure, first Home Screen 
+
+## Progress on
+
+Creating the raw User Interface(Home Screen)
+
+## Problems with
+
+Stylesheets, Java Versions(again)
+
+## Skip
+
+/
+
+## More time is needed for
+
+Creating the App, MySQL Server
+
+## Next Steps
+
+Creating a Nearby and a Leaderboard Section

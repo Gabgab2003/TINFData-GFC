@@ -7,15 +7,15 @@ An app, which is based around visiting parks in Vienna and collecting points by 
 
 ## Features
 
-A nearby page, which shows the closest parks to you
-A weekly leaderboard
-A map which shows your and the parks location(?)
+- A nearby page, which shows the closest parks to you
+- A weekly leaderboard
+- A map which shows your and the parks location(?)
 
 ## Team
 
-[Gabriel Klenner] (github.com/Gabgab2003)
-[Florian Flatscher] (https://github.com/FlorianFlatscher)
-[Christoph Kainz] (https://github.com/ckainz11)
+[Gabriel Klenner](github.com/Gabgab2003)
+[Florian Flatscher](https://github.com/FlorianFlatscher)
+[Christoph Kainz](https://github.com/ckainz11)
 
 ## Technologies
 

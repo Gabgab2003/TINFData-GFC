@@ -13,9 +13,9 @@ An app, which is based around visiting parks in Vienna and collecting points by 
 
 ## Team
 
-[Gabriel Klenner](github.com/Gabgab2003)
-[Florian Flatscher](https://github.com/FlorianFlatscher)
-[Christoph Kainz](https://github.com/ckainz11)
+- [Gabriel Klenner](github.com/Gabgab2003)
+- [Florian Flatscher](https://github.com/FlorianFlatscher)
+- [Christoph Kainz](https://github.com/ckainz11)
 
 ## Technologies
 

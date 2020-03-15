@@ -20,9 +20,10 @@ An app, which is based around visiting parks in Vienna and collecting points by 
 ## Technologies
 
 ### App
-React-Native
+- React-Native
+- Javascript
 ### Styling
-CSS
+- CSS
 ### Serverside
-Kotlin
+- Kotlin
 

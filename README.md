@@ -13,4 +13,16 @@ A map which shows your and the parks location(?)
 
 ## Team
 
-Gabriel Klenner [github.com/Gabgab2003]
+[Gabriel Klenner] (github.com/Gabgab2003)
+[Florian Flatscher] (https://github.com/FlorianFlatscher)
+[Christoph Kainz] (https://github.com/ckainz11)
+
+## Technologies
+
+### App
+React-Native
+### Styling
+CSS
+### Serverside
+Kotlin
+

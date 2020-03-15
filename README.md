@@ -13,4 +13,4 @@ A map which shows your and the parks location(?)
 
 ## Team
 
-@Gabgab2003
+Gabriel Klenner [github.com/Gabgab2003]
